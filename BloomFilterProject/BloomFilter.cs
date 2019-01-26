@@ -32,7 +32,7 @@ namespace AlgorithmsDataStructures
       int code = 0;
       for (int i = 0; i < str1.Length; i++)
         code = (code * 223 + str1[i]) % filter_len;
-      return 0;
+      return code;
     }
 
     public void Add(string str1)
