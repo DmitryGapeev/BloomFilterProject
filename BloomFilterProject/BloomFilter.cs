@@ -37,6 +37,9 @@ namespace AlgorithmsDataStructures
 
     public void Add(string str1)
     {
+      if(str1 == null)
+        return;
+
       int code1 = Hash1(str1);
       int code2 = Hash2(str1);
       _array[code1] = true;
@@ -45,7 +48,9 @@ namespace AlgorithmsDataStructures
 
     public bool IsValue(string str1)
     {
-      // проверка, имеется ли строка str1 в фильтре
+      if (str1 == null)
+        return false;
+      
       int code1 = Hash1(str1);
       int code2 = Hash2(str1);
 
